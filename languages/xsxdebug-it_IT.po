@@ -1,0 +1,50 @@
+# Copyright (C) 2019 Gieffe edizioni srl
+# This file is distributed under the same license as the xsx-debug plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: xsx-debug 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/xsx-debug\n"
+"Last-Translator: root <simone@gieffeedizioni.it>\n"
+"Language-Team: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2019-09-04T08:32:09+02:00\n"
+"PO-Revision-Date: 2019-09-04 08:43+0200\n"
+"X-Generator: WP-CLI 2.3.0\n"
+"X-Domain: xsxdebug\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "xsx-debug"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://www.gieffeedizioni.it/classicpress"
+msgstr ""
+
+#. Description of the plugin
+msgid "toggle php debug"
+msgstr ""
+
+#. Author of the plugin
+msgid "Gieffe edizioni srl"
+msgstr ""
+
+#: xsx-debug.php:57
+msgid ""
+"Do you want to toggle PHP DEBUG?\n"
+"It will reload the page and you'll loose your changes..."
+msgstr ""
+"Vuoi cambiare lo stato del DEBUG PHP?\n"
+"La pagina verrà ricaricata e potresti perdere i cambiamenti non salvati..."
+
+#: xsx-debug.php:67
+msgid "PHP DEBUG ENABLED"
+msgstr "DEBUG PHP ABILITATO"
+
+#: xsx-debug.php:67
+msgid "PHP DEBUG DISABLED"
+msgstr "DEBUG PHP DISABILITATO"

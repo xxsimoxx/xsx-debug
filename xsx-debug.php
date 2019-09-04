@@ -16,12 +16,10 @@ if (!defined('ABSPATH')) die('-1');
 /*
 * Load text domain
 */
-/*
 add_action( 'plugins_loaded', 'xsx_debug_load_textdomain' );
 function xsx_debug_load_textdomain() {
 	load_plugin_textdomain( 'xsxdebug', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
 }
-*/
 
 /*
 *  handle ajax call
@@ -66,7 +64,7 @@ function xsx_debug_setup(){
 
 function xsx_debug_addtoolbar() {
 	global $wp_admin_bar;
-	$xsx_debug_title = ( get_option ( 'xsx-debug' ) ) ? "PHP DEBUG ENABLED" : "PHP DEBUG DISABLED" ;
+	$xsx_debug_title = ( get_option ( 'xsx-debug' ) ) ? __( "PHP DEBUG ENABLED", 'xsxdebug' ) : __( "PHP DEBUG DISABLED", 'xsxdebug' ) ;
 	$xsx_debug_css   = ( get_option ( 'xsx-debug' ) ) ? "xsx-debug-toggle xsx-debug-red" : "xsx-debug-toggle xsx-debug-green" ;
 	$wp_admin_bar->add_node(array(
 		'id'    => 'xsx_debug',
