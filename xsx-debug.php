@@ -3,7 +3,7 @@
 * Plugin Name: xsx-debug
 * Plugin URI: https://www.gieffeedizioni.it/classicpress
 * Description: toggle php debug 
-* Version: 0.0.2
+* Version: 0.0.3
 * License: GPL2
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * Author: Gieffe edizioni srl
