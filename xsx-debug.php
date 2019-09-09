@@ -22,7 +22,7 @@ function xsx_debug_load_textdomain() {
 }
 
 /*
-*  handle ajax call
+*  handle ajax call used to toggle settings
 */
 add_action( 'wp_ajax_xsx_debug_toggle', 'xsx_debug_toggle' );
 function xsx_debug_toggle() {
@@ -36,7 +36,7 @@ function xsx_debug_toggle() {
 }
 
 /*
-*  enable php debugging if the option sais to
+*  enable php debugging
 */
 if ( get_option ( 'xsx-debug' ) ){
 	ini_set('display_startup_errors', true);
@@ -91,7 +91,8 @@ function xsx_debug_cleanup (){
 register_activation_hook( __FILE__, 'xsx_debug_activate' );
 function xsx_debug_activate() {
 	$all_ini = ini_get_all();
-	if (  $all_ini['error_reporting']['access'] & 1 ){
+	if ( ! $all_ini['error_reporting']['access'] & 1 ){
+		// check if the user can modify settings
 		set_transient( 'xsx-debug-notice', true, 10 );
 	};
     update_option( 'xsx-debug', false );
