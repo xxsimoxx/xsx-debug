@@ -3,7 +3,7 @@
 * Plugin Name: xsx-debug
 * Plugin URI: https://www.gieffeedizioni.it/classicpress
 * Description: toggle php debug 
-* Version: 0.0.1
+* Version: 0.0.2
 * License: GPL2
 * License URI: https://www.gnu.org/licenses/gpl-2.0.html
 * Author: Gieffe edizioni srl
@@ -42,6 +42,9 @@ if ( get_option ( 'xsx-debug' ) ){
 	ini_set('display_startup_errors', true);
 	error_reporting(E_ALL);
 	ini_set('display_errors', true);
+	ini_set('error_prepend_string', '<div style="width:100%;position:absolute;z-index:10000;overflow:auto;font-family:monospace;font-size:12pt;color:#f00;background-color:rgba(255,255,255,0.7);border:1px solid black;">');
+
+	ini_set('error_append_string', "<a href='#' onClick='this.parentNode.style.display=\"none\";'>" . __( "CLOSE", "xsxdebug") . "</a></div>");
 }
 
 /*
@@ -77,7 +80,6 @@ function xsx_debug_addtoolbar() {
 /**
 * uninstall hook
 */
-
 register_uninstall_hook( __FILE__ , 'xsx_debug_cleanup' );
 function xsx_debug_cleanup (){
 	delete_option( 'xsx-debug' );
@@ -88,8 +90,20 @@ function xsx_debug_cleanup (){
 */
 register_activation_hook( __FILE__, 'xsx_debug_activate' );
 function xsx_debug_activate() {
+	$all_ini = ini_get_all();
+	if (  $all_ini['error_reporting']['access'] & 1 ){
+		set_transient( 'xsx-debug-notice', true, 10 );
+	};
     update_option( 'xsx-debug', false );
 }
 
-
+add_action( 'admin_notices', 'xsx_debug_notice' );
+function xsx_debug_notice(){
+	if( get_transient( 'xsx-debug-notice' ) ){
+		echo'<div class="notice notice-warning  is-dismissible"><p>';
+		_e( "xsx-debug can't change <i>display_errors</i>. You have to do it manually.", "xsxdebug" );
+		echo '</p></div>';
+		delete_transient( 'xsx-debug-notice' );
+	}
+}
 ?>
