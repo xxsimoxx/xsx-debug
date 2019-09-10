@@ -16,7 +16,8 @@ Inspired from [this article by John Alarcon](https://codepotent.com/improved-php
 - **PHP erors, warnings, etc... are printed for everyone, not just Administrator**.
 
 ## Changelog
-* 2019/09/09 v. 0.0.2 work in progress
+* 2019/09/10 v. 0.0.2 work in progress
+   * more like Classicpress color scheming
    * added error styling
 * 2019/09/03 v. 0.0.1
    * first commit

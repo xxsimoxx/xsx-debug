@@ -38,14 +38,33 @@ function xsx_debug_toggle() {
 /*
 *  enable php debugging
 */
+function minimizeCSSsimple($css){
+	$css = preg_replace('/\/\*((?!\*\/).)*\*\//','',$css); // negative look ahead
+	$css = preg_replace('/\s{2,}/',' ',$css);
+	$css = preg_replace('/\s*([:;{}])\s*/','$1',$css);
+return $css;
+}
+
 if ( get_option ( 'xsx-debug' ) ){
 	ini_set('display_startup_errors', true);
 	error_reporting(E_ALL);
 	ini_set('display_errors', true);
 	// Thanks to John Alarcon for the idea.
 	// https://codepotent.com/improved-php-error-reporting-in-classicpress/
-	ini_set('error_prepend_string', '<div style="width:100%;position:absolute;z-index:10000;overflow:auto;font-family:monospace;font-size:12pt;color:#f00;background-color:rgba(255,255,255,0.7);border:1px solid black;">');
-	ini_set('error_append_string', "<a href='#' onClick='this.parentNode.style.display=\"none\";'>" . __( "CLOSE", "xsxdebug") . "</a></div>");
+	$xsx_debug_style_open = "
+		width: 100%;
+		padding: 2px;
+		position: absolute;
+		z-index: 10000;
+		overflow: auto;
+		font-family: monospace;
+		font-size: 12pt;
+		color: white;
+		background-color: rgba(137,40,143,0.8);
+		border: 1px solid black;
+	";
+	ini_set('error_prepend_string', '<div style="' . minimizeCSSsimple($xsx_debug_style_open) . '">');
+	ini_set('error_append_string', "<a href='#' style='color:white' onClick='this.parentNode.style.display=\"none\";'>" . __( "CLOSE", "xsxdebug") . "</a></div>");
 }
 
 /*
