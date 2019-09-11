@@ -8,6 +8,8 @@ When **PHP DEBUG ENABLED** those directives are set:
 	ini_set('display_errors', true);
 ```
 
+![version compatibility](https://img.shields.io/endpoint?url=https://www.gieffeedizioni.it/.cpup.json)
+
 Inspired from [this article by John Alarcon](https://codepotent.com/improved-php-error-reporting-in-classicpress/), output is formatted.
 
 ## Disclaimer and warnings
