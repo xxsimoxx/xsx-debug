@@ -1,5 +1,4 @@
 jQuery(document).ready(function(){
-	console.log('alive');
 	jQuery(".xsx-debug-toggle").click(function(e){
 		var answer=confirm(xsx_debug_translation.message);
 		if ( answer ){

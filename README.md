@@ -8,8 +8,6 @@ When **PHP DEBUG ENABLED** those directives are set:
 	ini_set('display_errors', true);
 ```
 
-![version compatibility](https://img.shields.io/endpoint?url=https://www.gieffeedizioni.it/.cpup.json)
-
 Inspired from [this article by John Alarcon](https://codepotent.com/improved-php-error-reporting-in-classicpress/), output is formatted.
 
 ## Disclaimer and warnings
@@ -18,6 +16,8 @@ Inspired from [this article by John Alarcon](https://codepotent.com/improved-php
 - **PHP erors, warnings, etc... are printed for everyone, not just Administrator**.
 
 ## Changelog
+* 2019/09/23 v. 0.0.3 work in progress
+   * Bugfix ("Alive" was printed in console under certain conditions)
 * 2019/09/10 v. 0.0.2 work in progress
    * more like Classicpress color scheming
    * added error styling
