@@ -1,15 +1,16 @@
 <?php
 /*
-* Plugin Name: xsx-debug
-* Plugin URI: https://www.gieffeedizioni.it/classicpress
-* Description: toggle php debug 
-* Version: 0.0.3
-* License: GPL2
-* License URI: https://www.gnu.org/licenses/gpl-2.0.html
-* Author: Gieffe edizioni srl
-* Author URI: https://www.gieffeedizioni.it/classicpress
-* Text Domain: xsxdebug
-*/
+ * Plugin Name: xsx-debug
+ * Plugin URI: https://github.com/xxsimoxx/xsx-debug
+ * Description: toggle php debug 
+ * Version: 0.0.3
+ * License: GPL2
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Author: Gieffe edizioni srl
+ * Author URI: https://www.gieffeedizioni.it/classicpress
+ * Text Domain: xsxdebug
+ * GitHub Plugin URI: xxsimoxx/cpvars
+ */
 
 if (!defined('ABSPATH')) die('-1');
 
