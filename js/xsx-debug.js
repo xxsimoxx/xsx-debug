@@ -1,5 +1,5 @@
 jQuery(document).ready(function(){
-	jQuery(".xsx-debug-toggle").click(function(e){
+	jQuery(".xsx-debug-toggle").click(function(){
 		var answer=confirm(xsx_debug_translation.message);
 		if ( answer ){
 			jQuery.ajax({
@@ -15,6 +15,6 @@ jQuery(document).ready(function(){
 			setTimeout(function() {
 				location.reload();
 			}, 4000);
-		};
+		}
 	});
 });
