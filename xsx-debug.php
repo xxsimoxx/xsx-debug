@@ -12,19 +12,25 @@
  * GitHub Plugin URI: xxsimoxx/xsx-debug
  */
 
-if (!defined('ABSPATH')) die('-1');
+if (!defined('ABSPATH')){
+	die('-1');
+};
 
 /*
-* Load text domain
-*/
+ *
+ * Load text domain
+ *
+ */
 add_action( 'plugins_loaded', 'xsx_debug_load_textdomain' );
 function xsx_debug_load_textdomain() {
 	load_plugin_textdomain( 'xsxdebug', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
 }
 
 /*
-*  handle ajax call used to toggle settings
-*/
+ *
+ *  handle ajax call used to toggle settings
+ *
+ */
 add_action( 'wp_ajax_xsx_debug_toggle', 'xsx_debug_toggle' );
 function xsx_debug_toggle() {
 	global $wpdb;
@@ -32,13 +38,14 @@ function xsx_debug_toggle() {
 		$xsx_debug_status = get_option ( 'xsx-debug' );
 		update_option( 'xsx-debug', ! $xsx_debug_status );
 	}
-	echo "OK!";
 	exit();
 }
 
 /*
-*  enable php debugging
-*/
+ *
+ *  enable php debugging
+ *
+ */
 function minimizeCSSsimple($css){
 	$css = preg_replace('/\/\*((?!\*\/).)*\*\//','',$css); // negative look ahead
 	$css = preg_replace('/\s{2,}/',' ',$css);
@@ -69,8 +76,10 @@ if ( get_option ( 'xsx-debug' ) ){
 }
 
 /*
-*  add our button to menu bar and make it work
-*/
+ *
+ *  add our button to menu bar and make it work
+ *
+ */
 add_action('init','xsx_debug_setup');
 function xsx_debug_setup(){
 	if( current_user_can( 'manage_options' ) && is_admin() ){
@@ -99,21 +108,26 @@ function xsx_debug_addtoolbar() {
 }
 
 /**
-* uninstall hook
-*/
+ * 
+ * uninstall hook
+ *
+ */
 register_uninstall_hook( __FILE__ , 'xsx_debug_cleanup' );
 function xsx_debug_cleanup (){
 	delete_option( 'xsx-debug' );
 }
 
 /**
-* activation hook
-*/
+ *
+ * activation hook
+ *
+ */
 register_activation_hook( __FILE__, 'xsx_debug_activate' );
 function xsx_debug_activate() {
 	$all_ini = ini_get_all();
 	if ( ! $all_ini['error_reporting']['access'] & 1 ){
-		// check if the user can modify settings
+		// Check if the user can modify settings
+		// and if not warn him.
 		set_transient( 'xsx-debug-notice', true, 10 );
 	};
     update_option( 'xsx-debug', false );
