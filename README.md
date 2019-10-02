@@ -19,6 +19,8 @@ This plugin supports [GitHub Updater](https://github.com/afragen/github-updater)
 - **PHP erors, warnings, etc... are printed for everyone, not just Administrator**.
 
 ## Changelog
+* 2019/09/24 v. 0.0.4-dev
+   * Bugfix closed issue #1
 * 2019/09/24 v. 0.0.3
    * Bugfix ("Alive" was printed in console under certain conditions)
    * Support for [GitHub Updater](https://github.com/afragen/github-updater)
