@@ -9,7 +9,6 @@
  * Author: Gieffe edizioni srl
  * Author URI: https://www.gieffeedizioni.it/classicpress
  * Text Domain: xsxdebug
- * GitHub Plugin URI: xxsimoxx/xsx-debug
  */
 
 if (!defined('ABSPATH')){
