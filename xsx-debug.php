@@ -67,7 +67,7 @@ if ( get_option ( 'xsx-debug' ) ){
 		font-family: monospace;
 		font-size: 12pt;
 		color: white;
-		background-color: rgba(137,40,143,0.8);
+		background-color: rgba(248,156,27,0.8);
 		border: 1px solid black;
 	";
 	ini_set('error_prepend_string', '<div style="' . minimizeCSSsimple( $xsx_debug_style_open ) . '">');
