@@ -20,7 +20,8 @@ This plugin supports [GitHub Updater](https://github.com/afragen/github-updater)
 - You will be notified if you don't have permission to modify necessari ini settings.
 
 ## Changelog
-* 2019/09/24 v. 0.0.4
+* 2019/XX/XX v. 0.0.5
+* 2019/10/13 v. 0.0.4
   * Bugfix closed issue #1
 * 2019/09/24 v. 0.0.3
   * Bugfix ("Alive" was printed in console under certain conditions)
