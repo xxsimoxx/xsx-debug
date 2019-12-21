@@ -1,7 +1,7 @@
 === xsx-debug ===
 Plugin Name:        xsx-debug
 Description:        This plugin adds a button to the toolbar to quickly enable/disable PHP Debug Messages
-Version:            0.0.5
+Version:            0.0.6
 Text Domain:        xsxdebug
 Domain Path:        /languages
 Requires PHP:       5.6

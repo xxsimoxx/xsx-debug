@@ -1,9 +1,9 @@
 <?php
-/*
+/**
  * Plugin Name: xsx-debug
  * Plugin URI: https://github.com/xxsimoxx/xsx-debug
  * Description: toggle php debug 
- * Version: 0.0.5
+ * Version: 0.0.6
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Author: Gieffe edizioni srl
@@ -24,6 +24,14 @@ add_action('plugins_loaded', 'xsx_debug_load_textdomain');
 function xsx_debug_load_textdomain() {
 	load_plugin_textdomain('xsxdebug', false, basename( dirname( __FILE__ ) ) . '/languages'); 
 }
+
+/*
+ *
+ * Handle updates with Update Manager by Codepotent.
+ *
+ */
+require_once('classes/UpdateClient.class.php');
+
 
 /*
  *
