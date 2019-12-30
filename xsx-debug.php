@@ -3,7 +3,7 @@
  * Plugin Name: xsx-debug
  * Plugin URI: https://github.com/xxsimoxx/xsx-debug
  * Description: toggle php debug 
- * Version: 0.0.7
+ * Version: 0.0.8
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Author: Gieffe edizioni srl
