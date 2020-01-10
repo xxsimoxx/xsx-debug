@@ -1,7 +1,7 @@
 === xsx-debug ===
 Plugin Name:        xsx-debug
 Description:        This plugin adds a button to the toolbar to quickly enable/disable PHP Debug Messages
-Version:            0.0.8
+Version:            0.0.9
 Text Domain:        xsxdebug
 Domain Path:        /languages
 Requires PHP:       5.6
@@ -10,7 +10,7 @@ Tested:             4.9.99
 Author:             Gieffe edizioni
 Author URI:         https://www.gieffeedizioni.it
 Plugin URI:         https://software.gieffeedizioni.it
-Download link:      https://github.com/xxsimoxx/xsx-debug/releases/download/v0.0.8/xsx-debug.zip
+Download link:      https://github.com/xxsimoxx/xsx-debug/releases/download/v0.0.9/xsx-debug.zip
 License:            GPLv2
 License URI:        https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,9 +29,11 @@ When **PHP DEBUG ENABLED** those directives are set:
 
 Inspired from [this article by John Alarcon](https://codepotent.com/improved-php-error-reporting-in-classicpress/), output is formatted.
 
-== Disclaimer ==
+# Disclaimer
 
 - This plugin is intended for use in staging sites. *Delete it when you go live*.
 - On plugin activation debugging is automatically switched off
 - **PHP erors, warnings, etc... are printed for everyone, not just Administrator**.
-- You will be notified if you don't have permission to modify necessari ini settings.
+- You will be notified if you don't have permission to modify necessari *ini* settings.
+
+*To help us know the number of active installations of this plugin, we collect and store anonymized data when the plugin check in for updates. The date and unique plugin identifier are stored as plain text and the requesting URL is stored as a non-reversible hashed value. This data is stored for up to 28 days.*
