@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
 					"action": "xsx_debug_toggle",
 				},
 				dataType : "json",
-				cache: false, 
+				cache: false,
 			});
 			jQuery("<div id='xsx-loader-wrapper'><div id='xsx-circle'><div></div></div></div>").prependTo(document.body).delay(4000);
 			setTimeout(function() {

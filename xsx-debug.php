@@ -2,8 +2,8 @@
 /**
  * Plugin Name: xsx-debug
  * Plugin URI: https://github.com/xxsimoxx/xsx-debug
- * Description: toggle php debug 
- * Version: 0.0.9
+ * Description: toggle php debug
+ * Version: 0.0.10
  * License: GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Author: Gieffe edizioni srl
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')){
  */
 add_action('plugins_loaded', 'xsx_debug_load_textdomain');
 function xsx_debug_load_textdomain() {
-	load_plugin_textdomain('xsxdebug', false, basename( dirname( __FILE__ ) ) . '/languages'); 
+	load_plugin_textdomain('xsxdebug', false, basename( dirname( __FILE__ ) ) . '/languages');
 }
 
 /*
@@ -104,7 +104,7 @@ function xsx_debug_setup() {
 
 function xsx_debug_addtoolbar() {
 	global $wp_admin_bar;
-	$xsx_debug_title = (get_option('xsx-debug')) ? esc_html__('PHP DEBUG ENABLED', 'xsxdebug') : esc_html__('PHP DEBUG DISABLED', 'xsxdebug') ;
+	$xsx_debug_title = (get_option('xsx-debug')) ? esc_html__('PHP DEBUG ENABLED', 'xsxdebug') : esc_html__('PHP DEBUG DISABLED', 'xsxdebug');
 	$xsx_debug_css   = (get_option('xsx-debug')) ? 'xsx-debug-toggle xsx-debug-red' : 'xsx-debug-toggle xsx-debug-green';
 	$wp_admin_bar->add_node([
 		'id'    => 'xsx_debug',
@@ -115,7 +115,7 @@ function xsx_debug_addtoolbar() {
 }
 
 /**
- * 
+ *
  * uninstall hook
  *
  */
@@ -137,11 +137,11 @@ function xsx_debug_activate() {
 		// and if not warn him.
 		set_transient('xsx-debug-notice', true, 10);
 	}
-    update_option('xsx-debug', false);
+	update_option('xsx-debug', false);
 }
 
 add_action('admin_notices', 'xsx_debug_notice');
-function xsx_debug_notice(){
+function xsx_debug_notice() {
 	if( get_transient( 'xsx-debug-notice' ) ){
 		echo '<div class="notice notice-warning  is-dismissible"><p>';
 		esc_attr_e("xsx-debug can't change <i>display_errors</i>. You have to do it manually.", "xsxdebug");
